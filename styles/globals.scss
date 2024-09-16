@@ -1,0 +1,144 @@
+:root {
+  --white-50: #fff;
+  --white-100: #e1e1e1;
+  --white-200: #e3e3e3;
+
+  --brown-50: #bfa871;
+  --brown-100: #c3a775;
+  --brown-200: #a28357;
+
+  --yellow-50: #f2b250;
+  --yellow-100: #c08117;
+
+  --black-50: #252525;
+  --black-100: #000000;
+
+  --gray-50: #676767;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+// fonts
+
+@font-face {
+  font-family: GeorgiaRegular;
+  src: url(../public/fonts/georgiaRegular.ttf);
+}
+
+@font-face {
+  font-family: GeorgiaRegularItalic;
+  src: url(../public/fonts/georgiaRegularItalic.ttf);
+}
+
+@font-face {
+  font-family: GeorgiaBold;
+  src: url(../public/fonts/georgiaBold.ttf);
+}
+
+@font-face {
+  font-family: GeorgiaBoldItalic;
+  src: url(../public/fonts/georgiaBoldItalic.ttf);
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; //15px
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%; //14px
+  }
+}
+
+body {
+  background-image: url('../public/icons/background.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--black-100);
+  -webkit-font-smoothing: antialiased;
+
+  font-family: GeorgiaRegular, serif;
+
+  overflow-x: hidden;
+}
+
+.contentMain {
+  max-width: 100vw;
+  min-width: 100vw;
+
+  transform: scale(1);
+  transform-origin: 0 0;
+}
+
+body,
+input,
+textarea,
+select,
+button,
+p {
+  font-size: 0.9rem;
+  font-family: GeorgiaRegular, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: GeorgiaRegularItalic, serif;
+  font-weight: 400;
+
+  span {
+    font-family: GeorgiaBold, serif;
+    font-style: normal;
+  }
+}
+
+h2 {
+  font-size: 3.6rem;
+
+  text-align: center;
+
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+
+  padding: 0.5rem 0;
+}
+
+button {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// barra de scroll
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--yellow-50);
+  border-radius: 1rem;
+}

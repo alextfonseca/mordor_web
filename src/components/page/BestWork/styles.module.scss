@@ -1,0 +1,27 @@
+.bestWork {
+  margin-top: 10rem;
+
+  .container {
+    width: 60%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .components {
+      margin-top: 7.5rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 7.5rem;
+    }
+  }
+}
+
+// responsive
+@media (max-width: 1050px) {
+  .bestWork .container {
+    width: 90%;
+  }
+}

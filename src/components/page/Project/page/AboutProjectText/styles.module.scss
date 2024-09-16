@@ -1,0 +1,104 @@
+.aboutProjectText {
+  width: 1015px;
+  margin: 0 auto;
+
+  .decoration {
+    position: absolute;
+    left: 0;
+    top: 1250px;
+  }
+
+  .title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 6.1875rem;
+
+    width: 828px;
+    margin: 9rem auto 8.1875rem auto;
+
+    h2 {
+      font-size: 3rem;
+      color: var(--yellow-100);
+    }
+
+    p {
+      color: var(--black-50);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .text p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+
+    &:nth-child(2) {
+      margin-top: 2.75rem;
+    }
+  }
+
+  .cite {
+    display: flex;
+    align-items: flex-start;
+    gap: 4.8125rem;
+
+    margin: 11.6875rem 0 4.6rem auto;
+
+    width: 88%;
+
+    h3 {
+      font-size: 2.25rem;
+      color: var(--yellow-100);
+    }
+
+    span {
+      display: block;
+      margin-top: 2.375rem;
+
+      font-size: 1.185rem;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+// responsive
+@media (max-width: 1000px) {
+  .aboutProjectText .decoration {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .aboutProjectText {
+    width: 90%;
+    .title {
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 90%;
+    }
+
+    .text {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutProjectText {
+    .cite {
+      gap: 0;
+      img {
+        display: none;
+        margin: 11.6875rem auto 4.6rem auto;
+      }
+    }
+  }
+}

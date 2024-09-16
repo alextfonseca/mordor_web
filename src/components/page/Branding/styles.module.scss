@@ -1,0 +1,227 @@
+.branding {
+  margin-top: 11.375rem;
+
+  p {
+    font-size: 2rem;
+
+    margin: 4rem auto 0 auto;
+
+    text-align: center;
+
+    width: 550px;
+
+    font-family: GeorgiaRegularItalic, serif;
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2.3rem;
+  }
+
+  .activeCards {
+    margin-top: 12rem;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
+
+    .card {
+      height: 100%;
+      transition: all 0.5s;
+
+      &:nth-child(1) {
+        position: relative;
+        left: 0;
+        top: -60px;
+
+        transform: rotate(0);
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        top: -126px;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        right: 0;
+        top: -60px;
+
+        transform: rotate(0);
+      }
+
+      button img,
+      a img {
+        width: 294.93px;
+        height: 472.36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button,
+      a {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+
+        background: none;
+      }
+    }
+  }
+
+  .disabledCards {
+    margin-top: 12rem;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
+
+    .card {
+      transition: all 0.5s;
+
+      &:nth-child(1) {
+        position: relative;
+        left: 80px;
+        top: -60px;
+
+        transform: rotate(-14.52deg);
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        top: -126px;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        right: 80px;
+        top: -60px;
+
+        transform: rotate(14.52deg);
+      }
+
+      button img,
+      a img {
+        width: 294.93px;
+        height: 472.36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button,
+      a {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+
+        background: none;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1070px) {
+  .branding {
+    .activeCards {
+      flex-direction: column;
+      margin-top: 4rem;
+
+      gap: 1rem;
+
+      .card {
+        &:nth-child(1) {
+          position: relative;
+          left: 0;
+          top: 0;
+
+          transform: rotate(0);
+        }
+
+        &:nth-child(2) {
+          position: relative;
+          top: 0;
+          z-index: 2;
+        }
+
+        &:nth-child(3) {
+          position: relative;
+          right: 0;
+          top: 0;
+
+          transform: rotate(0);
+        }
+      }
+    }
+
+    .disabledCards {
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 4rem;
+
+      .card {
+        &:nth-child(1) {
+          position: relative;
+          left: 0;
+          top: 0;
+
+          transform: none;
+        }
+
+        &:nth-child(2) {
+          position: relative;
+          top: 0;
+          z-index: 2;
+        }
+
+        &:nth-child(3) {
+          position: relative;
+          right: 0;
+          top: 0;
+
+          transform: none;
+        }
+      }
+    }
+
+    a {
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .branding {
+    p {
+      width: 90%;
+    }
+  }
+
+  .separator {
+    img {
+      width: 90%;
+    }
+  }
+}

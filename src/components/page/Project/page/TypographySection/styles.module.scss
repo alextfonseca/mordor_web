@@ -1,0 +1,40 @@
+.typographySection {
+  width: 1015px;
+  margin: 11.876rem auto 0 auto;
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+
+    font-style: normal;
+    font-family: GeorgiaBold, serif;
+  }
+
+  .text {
+    margin-top: 6.1875rem;
+
+    p {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+
+      &:nth-child(2) {
+        margin-top: 2.75rem;
+      }
+    }
+  }
+
+  img {
+    margin-top: 9.375rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// responsive
+
+@media (max-width: 1100px) {
+  .typographySection {
+    width: 90%;
+  }
+}

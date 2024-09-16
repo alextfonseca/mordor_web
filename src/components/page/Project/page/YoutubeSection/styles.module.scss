@@ -1,0 +1,19 @@
+.youtubeSection {
+  margin-top: 11.125rem;
+
+  background: var(--brown-50);
+
+  height: 587px;
+  width: 100%;
+
+  .youtubePlayer {
+    width: 90%;
+
+    max-width: 912px;
+
+    margin: 0 auto;
+
+    position: relative;
+    top: -70px;
+  }
+}

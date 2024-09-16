@@ -1,0 +1,197 @@
+.header {
+  padding-top: 3rem;
+
+  border-top: 20px solid var(--brown-50);
+
+  .container {
+    width: 930px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+      margin-right: 8.625rem;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 2.3rem;
+
+        .closeMenuButton {
+          display: none;
+        }
+
+        li a {
+          font-size: 1.25rem;
+          font-weight: 500;
+
+          &:hover {
+            color: var(--yellow-100);
+          }
+        }
+      }
+    }
+  }
+}
+
+// menu mobile
+.menuButton {
+  display: none;
+  border: none;
+  background: none;
+
+  position: relative;
+
+  width: 30px;
+  border-top: 3px solid var(--yellow-50);
+  color: var(--yellow-50);
+
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.5);
+  }
+
+  &::after,
+  &:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+}
+
+// responsive
+@media only screen and (max-width: 1000px) {
+  .header .container {
+    width: 90%;
+
+    flex-direction: row-reverse;
+
+    nav {
+      width: 100%;
+
+      margin: 0;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        height: 0;
+
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: var(--black-50);
+        transition: all 0.6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+
+        li {
+          color: var(--white-50);
+
+          transition: filter 0.3s;
+
+          &:hover {
+            filter: brightness(0.7);
+          }
+
+          a {
+            font-size: 1.7rem;
+          }
+        }
+
+        &.active {
+          position: fixed;
+
+          height: 100vh;
+          width: 100%;
+          visibility: visible;
+
+          padding: 2rem 0;
+
+          .closeMenuButton {
+            display: block;
+            border: none;
+            background: none;
+
+            position: absolute;
+            top: 80px;
+            right: 20px;
+
+            transition: filter 0.3s;
+
+            &:hover {
+              filter: brightness(0.5);
+            }
+
+            &::after,
+            &:before {
+              content: '';
+              display: block;
+              width: 30px;
+              height: 3px;
+              background: var(--white-50);
+              margin-top: 5px;
+              transition: 0.3s;
+              position: relative;
+              transition: 0.5s;
+              transform: rotate(0deg);
+            }
+
+            &:before {
+              transform: rotate(135deg);
+              animation: closeButtonBefore 1s;
+            }
+
+            &:after {
+              transform: rotate(-135deg);
+              top: -7px;
+              animation: closeButtonAfter 1s;
+            }
+          }
+        }
+      }
+    }
+    .registerMenuBox {
+      display: none;
+    }
+
+    .menuButton {
+      display: block;
+    }
+  }
+}
+
+@keyframes closeButtonBefore {
+  to {
+    transform: rotate(135deg);
+  }
+  from {
+    transform: rotate(0);
+  }
+}
+
+@keyframes closeButtonAfter {
+  to {
+    transform: rotate(-135deg);
+  }
+  from {
+    transform: rotate(0);
+  }
+}

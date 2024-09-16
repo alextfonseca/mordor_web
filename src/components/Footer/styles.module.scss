@@ -1,0 +1,134 @@
+.footer,
+.footerBackground {
+  margin-top: 10rem;
+
+  border-bottom: 20px solid var(--brown-50);
+
+  .container {
+    margin-bottom: 7.5rem;
+
+    width: 1015px;
+    margin: 0 auto 7.5rem auto;
+
+    .titleBox,
+    .phone,
+    .agency,
+    .email,
+    .copyright {
+      background: var(--brown-50);
+
+      width: 100%;
+    }
+
+    .titleBox {
+      padding: 4rem 2.5rem;
+
+      border-radius: 0.5rem 0.5rem 0 0;
+
+      border-bottom: 1px solid var(--white-50);
+    }
+
+    .content {
+      display: flex;
+
+      justify-content: space-between;
+
+      .agency,
+      .phone {
+        border-right: 1px solid var(--white-50);
+      }
+
+      .phone,
+      .agency,
+      .email {
+        padding: 3.5rem 2.5rem;
+      }
+
+      h3 {
+        font-size: 3.2rem;
+
+        font-family: GeorgiaBold, serif;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: var(--white-100);
+
+        margin-top: 0.5rem;
+      }
+    }
+
+    .copyright {
+      border-top: 1px solid var(--white-50);
+
+      border-radius: 0 0 0.5rem 0.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      padding: 1.5rem;
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.footerBackground {
+  background-image: url('../../../public/project/icons/footerProjectBackground.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+}
+
+// responsive
+@media (max-width: 1100px) {
+  .footer,
+  .footerBackground {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .footer,
+  .footerBackground {
+    .container {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .titleBox,
+        .phone,
+        .agency,
+        .email,
+        .copyright {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .footer,
+  .footerBackground {
+    .container {
+      .copyright {
+        flex-direction: column;
+      }
+    }
+  }
+}
